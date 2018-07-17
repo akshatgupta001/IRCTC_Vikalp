@@ -7,13 +7,12 @@
 //
 
 import Foundation
-class atasPnrEnqReqDTO :Codable {
+class AtasPnrEnqReqDTO :Codable {
     
-    var pnrNumber : String = String()
-    var trainNumber : String = String()
-    var captchaAnswer :String = String()
-    var tokenKey :String = String()
-    
+    var pnrNumber : String = ""
+    var trainNumber : String = ""
+    var captchaAnswer :String = ""
+    var tokenKey :String = ""
     
     private enum CodingKeys: String, CodingKey{
         

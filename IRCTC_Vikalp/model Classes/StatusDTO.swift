@@ -13,16 +13,18 @@ class StatusDTO : Codable {
     var errorFlag : Bool = false
     var errorMsg : String = ""
    //var journeyDate : NSDate
+    var journeyDate : String = ""
     
     private enum CodingKeys: String, CodingKey{
         case errorFlag
         case errorMsg
-        //case journeyDate
+        case journeyDate
     }
     
     init(){
         errorFlag = false
         errorMsg = ""
+        journeyDate = ""
        // journeyDate = NSDate()
     }
     
@@ -31,7 +33,8 @@ class StatusDTO : Codable {
               if let temp = try container.decodeIfPresent(String.self, forKey: .errorMsg) {errorMsg = String(temp)}
         
         if let temp = try container.decodeIfPresent(String.self, forKey: .errorFlag) {errorFlag = Bool(temp)!}
-       
+        if let temp = try container.decodeIfPresent(String.self, forKey: .journeyDate) {journeyDate = String(temp)}
+        
 //         if let temp = try container.decodeIfPresent(String.self, forKey: .journeyDate) {
 //            let dateFormatter = DateFormatter()
 //            dateFormatter.dateFormat = "MM-dd-yyyy"

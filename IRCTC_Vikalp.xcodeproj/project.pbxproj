@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0539A2920FDB97200A30006 /* AtasPNRBufferDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0539A2820FDB97200A30006 /* AtasPNRBufferDTO.swift */; };
+		E0539A2B20FDCD2500A30006 /* AtasTrainEnqRespDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0539A2A20FDCD2500A30006 /* AtasTrainEnqRespDTO.swift */; };
+		E0539A2D20FDCE3A00A30006 /* AtasTrainListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0539A2C20FDCE3A00A30006 /* AtasTrainListDTO.swift */; };
 		E0ACBC2A20EE172F0027157E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACBC2920EE172F0027157E /* AppDelegate.swift */; };
 		E0ACBC2C20EE172F0027157E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACBC2B20EE172F0027157E /* ViewController.swift */; };
 		E0ACBC2F20EE172F0027157E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0ACBC2D20EE172F0027157E /* Main.storyboard */; };
@@ -17,9 +20,17 @@
 		E0ACBC4020EF72250027157E /* atasPNRReqDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACBC3F20EF72250027157E /* atasPNRReqDTO.swift */; };
 		E0ACBC4220EF79410027157E /* StatusDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACBC4120EF79410027157E /* StatusDTO.swift */; };
 		E0ACBC4620F37E120027157E /* TrainsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACBC4520F37E120027157E /* TrainsVC.swift */; };
+		E0ACBC4920F4D4550027157E /* otpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACBC4820F4D4550027157E /* otpVC.swift */; };
+		E0ACBC5020F72F5F0027157E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACBC4E20F72F5F0027157E /* TableViewCell.swift */; };
+		E0ACBC5120F72F5F0027157E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0ACBC4F20F72F5F0027157E /* TableViewCell.xib */; };
+		E0ACBC5320F768290027157E /* TrainBtwnStnsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACBC5220F768290027157E /* TrainBtwnStnsDTO.swift */; };
+		E0ACBC5620F768760027157E /* TrainBtwnStnsDTO.json in Resources */ = {isa = PBXBuildFile; fileRef = E0ACBC5520F768760027157E /* TrainBtwnStnsDTO.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0539A2820FDB97200A30006 /* AtasPNRBufferDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtasPNRBufferDTO.swift; sourceTree = "<group>"; };
+		E0539A2A20FDCD2500A30006 /* AtasTrainEnqRespDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtasTrainEnqRespDTO.swift; sourceTree = "<group>"; };
+		E0539A2C20FDCE3A00A30006 /* AtasTrainListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtasTrainListDTO.swift; sourceTree = "<group>"; };
 		E0ACBC2620EE172F0027157E /* IRCTC_Vikalp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRCTC_Vikalp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0ACBC2920EE172F0027157E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0ACBC2B20EE172F0027157E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +43,11 @@
 		E0ACBC3F20EF72250027157E /* atasPNRReqDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atasPNRReqDTO.swift; sourceTree = "<group>"; };
 		E0ACBC4120EF79410027157E /* StatusDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusDTO.swift; sourceTree = "<group>"; };
 		E0ACBC4520F37E120027157E /* TrainsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainsVC.swift; sourceTree = "<group>"; };
+		E0ACBC4820F4D4550027157E /* otpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otpVC.swift; sourceTree = "<group>"; };
+		E0ACBC4E20F72F5F0027157E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		E0ACBC4F20F72F5F0027157E /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		E0ACBC5220F768290027157E /* TrainBtwnStnsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainBtwnStnsDTO.swift; sourceTree = "<group>"; };
+		E0ACBC5520F768760027157E /* TrainBtwnStnsDTO.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TrainBtwnStnsDTO.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,16 +80,16 @@
 		E0ACBC2820EE172F0027157E /* IRCTC_Vikalp */ = {
 			isa = PBXGroup;
 			children = (
-				E0ACBC4720F48BA50027157E /* View Controller */,
+				E0ACBC5420F7683D0027157E /* dummy data */,
+				E0ACBC4D20F72F410027157E /* cell */,
 				E0ACBC3B20EE1BD20027157E /* SubView.swift */,
 				E0ACBC2920EE172F0027157E /* AppDelegate.swift */,
+				E0ACBC4720F48BA50027157E /* View Controller */,
 				E0ACBC2D20EE172F0027157E /* Main.storyboard */,
 				E0ACBC3020EE17330027157E /* Assets.xcassets */,
 				E0ACBC3220EE17330027157E /* LaunchScreen.storyboard */,
 				E0ACBC3520EE17330027157E /* Info.plist */,
-				E0ACBC3D20EF3C430027157E /* captchaQueResponseDTO.swift */,
-				E0ACBC3F20EF72250027157E /* atasPNRReqDTO.swift */,
-				E0ACBC4120EF79410027157E /* StatusDTO.swift */,
+				E0ACBC4A20F72B080027157E /* model Classes */,
 			);
 			path = IRCTC_Vikalp;
 			sourceTree = "<group>";
@@ -82,9 +98,41 @@
 			isa = PBXGroup;
 			children = (
 				E0ACBC2B20EE172F0027157E /* ViewController.swift */,
+				E0ACBC4820F4D4550027157E /* otpVC.swift */,
 				E0ACBC4520F37E120027157E /* TrainsVC.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		E0ACBC4A20F72B080027157E /* model Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E0ACBC3D20EF3C430027157E /* captchaQueResponseDTO.swift */,
+				E0ACBC3F20EF72250027157E /* atasPNRReqDTO.swift */,
+				E0ACBC4120EF79410027157E /* StatusDTO.swift */,
+				E0ACBC5220F768290027157E /* TrainBtwnStnsDTO.swift */,
+				E0539A2820FDB97200A30006 /* AtasPNRBufferDTO.swift */,
+				E0539A2A20FDCD2500A30006 /* AtasTrainEnqRespDTO.swift */,
+				E0539A2C20FDCE3A00A30006 /* AtasTrainListDTO.swift */,
+			);
+			path = "model Classes";
+			sourceTree = "<group>";
+		};
+		E0ACBC4D20F72F410027157E /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				E0ACBC4E20F72F5F0027157E /* TableViewCell.swift */,
+				E0ACBC4F20F72F5F0027157E /* TableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		E0ACBC5420F7683D0027157E /* dummy data */ = {
+			isa = PBXGroup;
+			children = (
+				E0ACBC5520F768760027157E /* TrainBtwnStnsDTO.json */,
+			);
+			path = "dummy data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +194,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0ACBC3420EE17330027157E /* LaunchScreen.storyboard in Resources */,
+				E0ACBC5120F72F5F0027157E /* TableViewCell.xib in Resources */,
 				E0ACBC3120EE17330027157E /* Assets.xcassets in Resources */,
 				E0ACBC2F20EE172F0027157E /* Main.storyboard in Resources */,
+				E0ACBC5620F768760027157E /* TrainBtwnStnsDTO.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,9 +209,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0ACBC4020EF72250027157E /* atasPNRReqDTO.swift in Sources */,
+				E0ACBC5320F768290027157E /* TrainBtwnStnsDTO.swift in Sources */,
 				E0ACBC4220EF79410027157E /* StatusDTO.swift in Sources */,
+				E0539A2D20FDCE3A00A30006 /* AtasTrainListDTO.swift in Sources */,
+				E0ACBC4920F4D4550027157E /* otpVC.swift in Sources */,
+				E0539A2B20FDCD2500A30006 /* AtasTrainEnqRespDTO.swift in Sources */,
 				E0ACBC3E20EF3C430027157E /* captchaQueResponseDTO.swift in Sources */,
 				E0ACBC3C20EE1BD20027157E /* SubView.swift in Sources */,
+				E0539A2920FDB97200A30006 /* AtasPNRBufferDTO.swift in Sources */,
+				E0ACBC5020F72F5F0027157E /* TableViewCell.swift in Sources */,
 				E0ACBC4620F37E120027157E /* TrainsVC.swift in Sources */,
 				E0ACBC2C20EE172F0027157E /* ViewController.swift in Sources */,
 				E0ACBC2A20EE172F0027157E /* AppDelegate.swift in Sources */,
