@@ -8,7 +8,7 @@
 
 import UIKit
 
-class otpVC: SubView {
+class otpVC: SubView,UITextFieldDelegate {
 
     @IBOutlet weak var otpBtn: UIButton!
     var pnrNumber  : String = "";
@@ -18,6 +18,7 @@ class otpVC: SubView {
         super.viewDidLoad()
        // self.navigationItem.titl = "OTP SCREEN"
         otpBtn.layer.cornerRadius = otpBtn.frame.height/2
+        self.otpTextField.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -25,10 +26,16 @@ class otpVC: SubView {
         super.viewDidAppear(true)
         setTitle(title: "OTP SCREEN")
         
-        
+       
         
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
+   
     func otpWebServiceCall(){
         //let otp : String = (otpTextField.text)!
             let url = URL(string: "http://10.64.0.214:7011/ctcan/webservices/systktservices/atasTrainEnq/\(pnrNumber)/\(otpTextField.text!)")!
@@ -59,34 +66,27 @@ class otpVC: SubView {
                         print(pnrBuffer.toStation)
                     }
                     if errorMsg != "OTP Mismatch /Session Expired"{
-                        DispatchQueue.main.async {
-                            self.performSegue(withIdentifier: "showTrain", sender: self)
-                        }
+//                        DispatchQueue.main.async {
+//                            self.performSegue(withIdentifier: "showTrain", sender: self)
+//                        }
+                          self.performSegue(withIdentifier: "showTrain", sender: self)
                     }else {
-                        DispatchQueue.main.async {
-                        let alert = UIAlertController(title: "Alert", message: errorMsg, preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                            switch action.style{
-                            case .default:
-                                print("default")
-                                
-                            case .cancel:
-                                print("cancel")
-                                
-                            case .destructive:
-                                print("destructive")
-                                
-                                
-                            }}))
-                        self.present(alert, animated: true, completion: nil)
-                        }
-                        
+//                        DispatchQueue.main.async {
+//                             let alert = UIAlertController(title: "Alert", message: errorMsg, preferredStyle: UIAlertControllerStyle.alert)
+//                                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+//                                 switch action.style{
+//                                 case .default:
+//                                   print("default")
+//                                  case .cancel:
+//                                  print("cancel")
+//                                case .destructive:
+//                                  print("destructive")
+//                            
+//                                 }}))
+//                        self.present(alert, animated: true, completion: nil)
+//                        }
                     }
-                    
-                    
-                   
-                    
-//
+                 
                 }catch{
                     print("otp error: \(err.debugDescription)")
                 }
@@ -97,6 +97,7 @@ class otpVC: SubView {
             }.resume()
     }
     
+   
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showTrain" {
@@ -110,7 +111,7 @@ class otpVC: SubView {
     }
    
     @IBAction func otpBtnPressed(_ sender: Any) {
-        print(otpTextField)
+        print(otpTextField.text!)
         if otpTextField != nil {
           otpWebServiceCall()
             
@@ -133,3 +134,6 @@ class otpVC: SubView {
     
     
 }
+
+
+

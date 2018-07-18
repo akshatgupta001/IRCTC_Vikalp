@@ -13,6 +13,8 @@ class TrainsVC: SubView, UITableViewDelegate, UITableViewDataSource {
     
     var atasTrainEnqResp : AtasTrainEnqRespDTO?
     var pnrBuffer : AtasPNRBufferDTO?
+    var trainList : AtasTrainListDTO?
+    var trainsBtwnStns : [TrainBtwnStnsDTO]?
     var datePicker : UIDatePicker?
 
     @IBOutlet weak var pnrNumber: UILabel!
@@ -32,6 +34,46 @@ class TrainsVC: SubView, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var TrainDateInputField: UITextField!
     
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setDate()
+       
+        tableView.delegate = self
+        tableView.dataSource = self
+        let nibName = UINib(nibName: "TableViewCell", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "TableViewCell")
+        SubmitBtn.layer.cornerRadius = SubmitBtn.frame.height/2
+        
+        if let trainResp = atasTrainEnqResp{
+            pnrBuffer = trainResp.atasPnrBuffer
+            trainList = trainResp.atasTrainList
+            for i in (trainList?.trainBtwnStnsList)!{
+                trainsBtwnStns?.append(i)
+                print(i.fromStnCode ?? "stncode")
+                print(i.trainNumber ?? "train")
+            }
+            
+            
+            self.trainName.text = pnrBuffer?.trainName
+            self.trainNumber.text = pnrBuffer?.trainNumber
+            self.pnrNumber.text = pnrBuffer?.pnrNumber
+            self.fromStn.text = pnrBuffer?.fromStaion
+            self.toStn.text = pnrBuffer?.toStation
+
+        }
+        print(testString)
+        print(atasTrainEnqResp?.atasPnrBuffer?.trainName ?? "lol")
+        self.trainName.text = atasTrainEnqResp?.atasPnrBuffer?.trainName
+        self.pnrNumber.text = atasTrainEnqResp?.atasPnrBuffer?.pnrNumber
+    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        
+//        super.viewDidAppear(true)
+//        setTitle(title: "TRAIN LIST")
+//        
+//    }
+
     func setDate(){
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
@@ -64,37 +106,6 @@ class TrainsVC: SubView, UITableViewDelegate, UITableViewDataSource {
         
         
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setDate()
-       
-        tableView.delegate = self
-        tableView.dataSource = self
-        let nibName = UINib(nibName: "TableViewCell", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "TableViewCell")
-        SubmitBtn.layer.cornerRadius = SubmitBtn.frame.height/2
-        
-        if let trainResp = atasTrainEnqResp{
-            pnrBuffer = trainResp.atasPnrBuffer
-            self.trainName.text = pnrBuffer?.trainName
-            self.trainNumber.text = pnrBuffer?.trainNumber
-            self.pnrNumber.text = pnrBuffer?.pnrNumber
-            self.fromStn.text = pnrBuffer?.fromStaion
-            self.toStn.text = pnrBuffer?.toStation
-
-        }
-        print(testString)
-        print(atasTrainEnqResp?.atasPnrBuffer?.trainName ?? "lol")
-        self.trainName.text = atasTrainEnqResp?.atasPnrBuffer?.trainName
-        self.pnrNumber.text = atasTrainEnqResp?.atasPnrBuffer?.pnrNumber
-    }
-//    override func viewDidAppear(_ animated: Bool) {
-//        
-//        super.viewDidAppear(true)
-//        setTitle(title: "TRAIN LIST")
-//        
-//    }
-
     
     @objc func dateChanged(datePicker : UIDatePicker){
         
